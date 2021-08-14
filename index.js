@@ -8,6 +8,10 @@ const io = new Server(server);
 app.get('/', (req, res) => {
   res.sendFile(`${__dirname}/index.html`);
 });
+app.get('/main', (req, res) => {
+  res.sendFile(`${__dirname}/js/main.js`);
+});
+
 
 io.on('connection', (socket)=>{
   // socket.broadcast.emit('hi');
